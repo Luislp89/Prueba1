@@ -54,40 +54,38 @@
           <p class="lead text-body-secondary">
             Una galería interactiva creada con inteligencia artificial: imágenes, voces y sonidos que nacen de las ideas.</p>
           <p> 
-            <button id="btnReproducir" class="btn btn-primary my-2">Escucha mi guion</button>
-             <button id="btnReproducir2" class="btn btn-primary my-2">Sigo Aprendiendo</button>
-             <a href="assets/composicion.mp3" download="composicion.mp3" class="btn btn-secondary my-2">Descarga mi composición musical</a>
-          </p>
-            <audio id="audioGuion" src="assets/Guion a Voz.mp3"></audio>
-          <audio id="Composicion" src="assets/composicion.mp3"></audio>
+  <button id="btnReproducir" class="btn btn-primary my-2">Escucha mi guion</button>
+  <button id="btnReproducir2" class="btn btn-primary my-2">Escucha “Sigo Aprendiendo”</button>
+  <a href="assets/composicion.mp3" download="composicion.mp3" class="btn btn-secondary my-2">Descarga mi composición musical</a>
+</p>
 
-          <script>
-  const boton = document.getElementById('btnReproducir');
-  const audio = document.getElementById('audioGuion');
+<audio id="audioGuion" src="assets/Guion a Voz.mp3"></audio>
+<audio id="audioComposicion" src="assets/composicion.mp3"></audio>
 
-  boton.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-      boton.textContent = 'Pausar guion';
+<script>
+  const botonGuion = document.getElementById('btnReproducir');
+  const audioGuion = document.getElementById('audioGuion');
+
+  botonGuion.addEventListener('click', () => {
+    if (audioGuion.paused) {
+      audioGuion.play();
+      botonGuion.textContent = 'Pausar guion';
     } else {
-      audio.pause();
-      boton.textContent = 'Escucha mi guion';
+      audioGuion.pause();
+      botonGuion.textContent = 'Escucha mi guion';
     }
   });
-</script>
-          
-          <!-- Script para controlar la reproducción -->
-<script>
-  const boton = document.getElementById('btnReproducir2');
-  const audio = document.getElementById('Composicion');
 
-  boton.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-      boton.textContent = 'Pausar Sigo Aprendiendo';
+  const botonComposicion = document.getElementById('btnReproducir2');
+  const audioComposicion = document.getElementById('audioComposicion');
+
+  botonComposicion.addEventListener('click', () => {
+    if (audioComposicion.paused) {
+      audioComposicion.play();
+      botonComposicion.textContent = 'Pausar “Sigo Aprendiendo”';
     } else {
-      audio.pause();
-      boton.textContent = 'Escucha Sigo Aprendiendo';
+      audioComposicion.pause();
+      botonComposicion.textContent = 'Escucha “Sigo Aprendiendo”';
     }
   });
 </script>
