@@ -54,9 +54,26 @@
           <p class="lead text-body-secondary">
             Una galería interactiva creada con inteligencia artificial: imágenes, voces y sonidos que nacen de las ideas.</p>
           <p> 
-            <a href="#" class="btn btn-primary my-2" onclick="document.getElementById('Guion a Voz.mp3').play()">Escucha mi guion</a>
-            <a href="#" class="btn btn-secondary my-2">Descarga mi composicion musical</a> </p>
+            <button id="btnReproducir" class="btn btn-primary my-2">Escucha mi guion</button>
+            <a href="#" class="btn btn-secondary my-2">Descarga mi composicion musical</a> 
+          </p>
             <audio id="audioGuion" src="assets/Guion a Voz.mp3"></audio>
+
+          <!-- Script para controlar la reproducción -->
+<script>
+  const boton = document.getElementById('btnReproducir');
+  const audio = document.getElementById('audioGuion');
+
+  boton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      boton.textContent = 'Pausar guion';
+    } else {
+      audio.pause();
+      boton.textContent = 'Escucha mi guion';
+    }
+  });
+</script>
         </div>
       </div>
     </section>
