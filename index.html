@@ -56,11 +56,11 @@
           <p> 
   <button id="btnReproducir" class="btn btn-primary my-2">Escucha mi guion</button>
   <button id="btnReproducir2" class="btn btn-primary my-2">Escucha “Sigo Aprendiendo”</button>
-  <a href="assets/composicion.mp3" download="composicion.mp3" class="btn btn-secondary my-2">Descarga mi composición musical</a>
+  <a href="assets/Sigo Aprendiendo.mp3" download="Sigo Aprendiendo.mp3" class="btn btn-secondary my-2">Descarga “Sigo Aprendiendo”</a>
 </p>
 
 <audio id="audioGuion" src="assets/Guion a Voz.mp3"></audio>
-<audio id="audioComposicion" src="assets/composicion.mp3"></audio>
+<audio id="audioSigo" src="assets/Sigo Aprendiendo.mp3"></audio>
 
 <script>
   const botonGuion = document.getElementById('btnReproducir');
@@ -76,19 +76,20 @@
     }
   });
 
-  const botonComposicion = document.getElementById('btnReproducir2');
-  const audioComposicion = document.getElementById('audioComposicion');
+  const botonSigo = document.getElementById('btnReproducir2');
+  const audioSigo = document.getElementById('audioSigo');
 
-  botonComposicion.addEventListener('click', () => {
-    if (audioComposicion.paused) {
-      audioComposicion.play();
-      botonComposicion.textContent = 'Pausar “Sigo Aprendiendo”';
+  botonSigo.addEventListener('click', () => {
+    if (audioSigo.paused) {
+      audioSigo.play();
+      botonSigo.textContent = 'Pausar “Sigo Aprendiendo”';
     } else {
-      audioComposicion.pause();
-      botonComposicion.textContent = 'Escucha “Sigo Aprendiendo”';
+      audioSigo.pause();
+      botonSigo.textContent = 'Escucha “Sigo Aprendiendo”';
     }
   });
 </script>
+
         </div>
       </div>
     </section>
